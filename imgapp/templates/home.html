@@ -1,3 +1,5 @@
+{% load static %}
+<img src="{% static 'img/Hearthstone.png' %}" width=500><br>
 {{user}}님~ <a href="{% url 'create' %}">글쓰기</a><br><br>
 
 {% for post in posts %}

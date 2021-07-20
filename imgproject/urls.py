@@ -11,5 +11,5 @@ urlpatterns = [
     path('create', imgapp.views.create, name='create'),
     path('update/<int:id>', imgapp.views.update, name='update'),
     path('delete/<int:id>', imgapp.views.delete, name='delete'),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
