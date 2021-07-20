@@ -1,0 +1,7 @@
+{{user}}님~ <a href="{% url 'create' %}">글쓰기</a><br><br>
+
+{% for post in posts %}
+    <p>{{post.title}}</p>
+    <a href="{% url 'detail' post.id %}">더보기</a>
+    <br><br>
+{% endfor %}

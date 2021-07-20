@@ -1,0 +1,10 @@
+{{user}}님~<br><br>
+
+{{post.title}}<br>
+{% if user == post.author %}
+    <a href="{% url 'update' post.id %}">수정하기</a>
+    <a href="{% url 'delete' post.id %}">삭제하기</a> <br>
+{% endif %}
+<img src="{{post.image.url}}"><br>
+{{post.body}}<br>
+{{post.author}}
